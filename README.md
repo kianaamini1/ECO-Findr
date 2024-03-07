@@ -1,7 +1,7 @@
 # ECO-Findr
 ## Created by
-- kiana Amini
-- Zalida khan
+- Kiana Amini
+- Zalida Khan
 
 ## Description
 - Eco friendly event finder app
