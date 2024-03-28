@@ -1,5 +1,7 @@
-.chip-card {
-    width: 20px;
-    height: 10px;
+
+.chipCard {
+    width: 3rem;
+    height: 1.5rem;
+    text-align: center;
     background-color: var(--lightYellow);
 }

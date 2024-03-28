@@ -1,0 +1,27 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 18rem;
+    height: 10rem;
+    align-items: center;
+  }
+  
+  img {
+    border-radius: 2rem;
+    width: 18rem;
+    height: 10rem;
+    z-index: 99999;
+  }
+  
+  .bottomTitle {
+    width: 17rem;
+    height: 5rem;
+    border-radius: 1rem;
+    margin-top: -10px;
+    background-color: var(--lightYellow)
+  }
+  
+  h2 {
+    padding-left: 0.5rem;
+    font-size: 24px;
+  }
