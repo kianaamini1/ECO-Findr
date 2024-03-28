@@ -1,0 +1,15 @@
+.button {
+    padding: 15px 40px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 2px solid var(--darkGreen);
+    background-color: var(--darkGreen);
+    color: var(--white);
+    transition: background-color 0.3s ease;
+    font-size: var(--button-fontsize);
+    width: 200px;
+}
+
+.button:hover {
+    background-color: #1a3d28 0.5;
+}

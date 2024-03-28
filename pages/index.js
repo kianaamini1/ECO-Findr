@@ -3,10 +3,6 @@ import styles from "@/styles/Home.module.css";
 import Cards from "@/components/Cards"
 import Chips from "@/components/Chips";
 
-
-
-
-
 export default function Home() {
   return (
     <>

@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 6rem;
+  min-height: 60vh;
+}
+
+.heading {
+  font-size: var(--h1-fontsize);
+  text-align: center;
+}
