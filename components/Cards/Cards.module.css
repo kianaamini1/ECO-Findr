@@ -18,7 +18,7 @@
   .bottomTitle {
     width: 17rem;
     height: 5rem;
-    border-radius: 1rem;
+    border-radius: 12px;
     margin-top: -10px;
     background-color: var(--lightYellow)
   }
