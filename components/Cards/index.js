@@ -1,13 +1,13 @@
 
-import styles from "./cards.module.css";
+import styles from './Cards.module.css';
 
-export default function Card({ title, imgSrc, alt }) {
+export default function Cards({ title, imgSrc, alt }) {
     
   return (
     <div className={styles.Cards}>
-      <img src={imgSrc} alt={alt} />
+      <img className={styles.cardImage} src={imgSrc} alt={alt} />
       <div className={styles.bottomTitle}>
-        <h2>{title}</h2>
+        <h2 className={styles.h2}>{title}</h2>
       </div>
     </div>
   );

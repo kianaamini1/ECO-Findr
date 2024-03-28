@@ -1,9 +1,11 @@
-import styles from './cards.modules.css'
+import styles from './Chips.module.css'
 
-export default function Chip(buttonText) {
-    return (
+export default function Chips({buttonText}) {
+    return (  
+        <>
         <button type="submit" className={styles.chipCard}>
             {buttonText}
         </button>
+        </>
     )
 }

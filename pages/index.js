@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Cards from "@/components/Cards"
+import Chips from "@/components/Chips";
 
 
 
@@ -16,8 +17,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} `}>
-      <Card title="Biking" imgSrc="biking.jpg" alt="biking" />
-      
+      <Cards title="Biking" imgSrc="/images/biking.jpeg" alt="biking" />
+      <Chips/>
       </main>
     </>
   );

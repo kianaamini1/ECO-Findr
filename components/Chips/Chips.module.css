@@ -1,0 +1,9 @@
+
+.chipCard {
+    width: 4rem;
+    height: 1.5rem;
+    text-align: center;
+    background-color: var(--lightGreen);
+    border-color: var(--paleGreen);
+    border-radius: 3.5px;
+}
