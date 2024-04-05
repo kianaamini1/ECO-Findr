@@ -1,9 +1,21 @@
 
 .chipCard {
-    width: 4rem;
+    width: 5rem;
     height: 1.5rem;
     text-align: center;
     background-color: var(--lightGreen);
     border-color: var(--paleGreen);
     border-radius: 3.5px;
+    
+    margin: 7px;
+    
+}
+.chipCard:hover {
+    background-color: var(--darkGreen);
+    color: var(--white);
+}
+
+.chipCard:active {
+    background-color: var(--darkGreen);
+    color: var(--white);
 }

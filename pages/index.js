@@ -13,8 +13,31 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} `}>
+        <div className={styles.chips}>
+        <Chips buttonText={"Biking"}/>
+        <Chips buttonText={"Outdoor"}/>
+        <Chips buttonText={"Beach"}/>
+        <Chips buttonText={"Hike"}/>
+        <Chips buttonText={"Indoor"}/>
+        <Chips buttonText={"Food"}/>
+        <Chips buttonText={"Group"}/>
+        </div>
+     
+       
+        <div className={styles.cards}>
+          <h3 className={styles.h3}>Upcoming Events</h3>
+      <Cards title="Community Clean Up" imgSrc="/images/Clean-Up.jpeg" alt="Clean-up" />
       <Cards title="Biking" imgSrc="/images/biking.jpeg" alt="biking" />
-      <Chips/>
+      <Cards title="Gardening" imgSrc="/images/gardening.jpeg" alt="gardening" />
+      <Cards title="Fishing" imgSrc="/images/fishing.jpeg" alt="fishing"/>
+      <Cards title="Hike" imgSrc="/images/hiking.jpeg" alt="hike"/>
+      <Cards title="Baking Class" imgSrc="/images/baking.webp" alt="baking"/>
+      <Cards title="Swap Sale" imgSrc="/images/garage-sale.jpeg" alt="swap-sale"/>
+      <Cards title="Outdoor Yoga" imgSrc="/images/yoga.jpeg" alt="yoga"/>
+      <Cards title="Tree Planting" imgSrc="/images/tree-planting.jpeg" alt="tree-planting"/>
+      <Cards title="Picnic" imgSrc="/images/picnic.jpeg" alt="picnic"/>
+      </div>
+     
       </main>
     </>
   );
