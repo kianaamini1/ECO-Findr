@@ -1,8 +1,8 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import Button from "../components/Button";
-import styles from "../styles/Landing.module.css";
+import Button from "@/components/Button";
+import styles from "@/styles/Landing.module.css";
 
 const Home = () => {
   return (
