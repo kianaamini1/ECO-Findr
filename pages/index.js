@@ -21,20 +21,10 @@ const Home = () => {
         </h1>
         <div className={styles.buttonContainer}>
           <Link href="/Quiz">
-            <Button
-              className={`${styles.button}`}
-              text="Get Started →"
-              buttonColor="var(--clear-button)"
-              textColor="var(--black)"
-            />
+            <Button className={styles.button} text="Get Started &#8594;" />
           </Link>
           <Link href="/Tutorial">
-            <Button
-              className={`${styles.buttonTwo}`}
-              text="Tutorial"
-              buttonColor="var(--darkGreen)"
-              textColor="var(--white)"
-            />
+            <Button className={styles.buttonTwo} text="Tutorial" />
           </Link>
         </div>
       </main>

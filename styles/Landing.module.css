@@ -24,15 +24,7 @@
   text-align: center;
 }
 
-/* Buttons & Hover Effects */
-.buttonContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-}
-
+/* Buttons & Hover Effect */
 .buttonContainer {
   display: flex;
   flex-direction: column;
@@ -42,24 +34,15 @@
   gap: 40px;
 }
 
-.button {
+/* Styles for buttons */
+.button, .buttonTwo {
   padding: 15px 40px;
   cursor: pointer;
   border-radius: 25px;
-  border: 2px solid var(--black);
-  background-color: var(--clear-button);
-  color: var(--black);
-  transition: background-color 0.3s ease;
   font-size: var(--button-fontsize);
   width: 200px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
-}
-
-.button:hover {
-  background-color: var(--darkGreen);
-  color: var(--white);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .buttonTwo {
@@ -69,17 +52,14 @@
   border: 2px solid var(--darkGreen);
   background-color: var(--darkGreen);
   color: var(--white);
-  transition: background-color 0.3s ease;
-  font-size: var(--button-fontsize);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
   width: 200px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
 }
 
 .buttonTwo:hover {
   background-color: var(--clear-button);
   color: var(--black);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-
 }
 
 /* Media query for smaller screens */
