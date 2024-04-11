@@ -1,14 +1,13 @@
 import React from 'react';
-import styles from './Button.module.css';
 
-const Button = ({ text, buttonColor, textColor }) => {
-  const defaultButtonColor = 'var(--darkButton)';
-  const defaultTextColor = 'var(--white)';
-
+const Button = ({ className, text, buttonColor, textColor }) => {
   return (
     <button
-      className={styles.button}
-      style={{ backgroundColor: buttonColor || defaultButtonColor, color: textColor || defaultTextColor }}
+      className={className}
+      style={{
+        backgroundColor: buttonColor,
+        color: textColor
+      }}
     >
       {text}
     </button>
