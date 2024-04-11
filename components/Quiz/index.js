@@ -2,24 +2,28 @@ import React from "react";
 import { useState } from "react";
 import styles from "./Quiz.module.css";
 
-const Choices = ({ text }) => {
+
+
+const Choices = ({ text, onClick }) => {
   return (
     <>
-      <button className={styles.choices}>{text}</button>
+      <button className={styles.choices} onClick={onClick}>{text}</button>
     </>
   );
-};
+  }
 
 export function Quiz() {
   return (
     <>
       <div className={styles.setup}>
         <div className={styles.question}>
-          <p>Enhance your feed by taking a short quiz.</p>
+          <p>Enhance your feed by taking a short quiz. Enhance your feed by</p>
         </div>
       </div>
       <>
-       
+        <Choices text={"I'm interested"} />
+        <Choices text={"I'm not interested"} />
+        <Choices text={"It doesn't matter"} />
       </>
     </>
   );
@@ -39,7 +43,8 @@ export function QuizSetup() {
           <div className={styles.setup}>
             <div className={styles.question}>
               <p>
-                Enhance your feed by taking a short quiz. 
+                Enhance your feed by taking a short quiz. Enhance your feed by
+                taking a short quiz.
               </p>
             </div>
           </div>

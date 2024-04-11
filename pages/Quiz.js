@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import { QuizSetup } from "../components/Quiz";
-import Choices from "@/components/Choices";
+// import Choices from "@/components/Choices";
 import styles from "@/styles/Quiz.module.css";
 
 const QuizPage = () => {
@@ -16,7 +16,7 @@ const QuizPage = () => {
       <main className={`${styles.main}`}>
         <QuizSetup/>
         <>
-        <Choices text={"ya"}/>
+      
         </>
         
        
