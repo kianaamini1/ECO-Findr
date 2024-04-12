@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "@/styles/Home.module.css";
+import styles from "@/styles/PageHome.module.css";
 import Cards from "@/components/Cards"
 import Chips from "@/components/Chips";
 

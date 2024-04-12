@@ -1,24 +1,25 @@
 .Cards {
     display: flex;
     flex-direction: column;
-    width: 18rem;
-    height: 10rem;
+    width: 353px;
+    height: 360px;
     align-items: center;
-    margin-bottom: 90px;
+    margin-bottom: 60px;
+    
   }
   
   .cardImage {
     border-radius: 2rem;
-    width: 18rem;
-    height: 10rem;
+    width: 365px;
+    height: 190px;
     z-index: 99999;
     align-content: center;
   }
   
   .bottomTitle {
-    width: 17rem;
-    height: 5rem;
-    border-radius: 12px;
+    width: 353px;
+    height: 143px;
+    border-radius: 20px;
     margin-top: -10px;
     background-color: var(--lightYellow)
   }

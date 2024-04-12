@@ -1,68 +1,30 @@
 import React from "react";
-import { useState } from "react";
 import styles from "./Quiz.module.css";
 
-
-
-const Choices = ({ text, onClick }) => {
-  return (
-    <>
-      <button className={styles.choices} onClick={onClick}>{text}</button>
-    </>
-  );
-  }
-
-export function Quiz() {
+export function QuizSetup({ question, handleAnswerClick }) {
   return (
     <>
       <div className={styles.setup}>
         <div className={styles.question}>
-          <p>Enhance your feed by taking a short quiz. Enhance your feed by</p>
+          <p>{question.question}</p>
         </div>
       </div>
-      <>
-        <Choices text={"I'm interested"} />
-        <Choices text={"I'm not interested"} />
-        <Choices text={"It doesn't matter"} />
-      </>
+      <div>
+        {question.answers.map((answer, index) => (
+          <Choices key={index} text={answer} onClick={handleAnswerClick} />
+        ))}
+      </div>
     </>
   );
 }
 
-export function QuizSetup() {
-  const [showQuiz, setShowQuiz] = useState(false);
-
-  const handleNextClick = () => {
-    setShowQuiz(true);
-  };
-
+export function Choices({ text, onClick }) {
   return (
     <>
-      {!showQuiz ? (
-        <>
-          <div className={styles.setup}>
-            <div className={styles.question}>
-              <p>
-                Enhance your feed by taking a short quiz. Enhance your feed by
-                taking a short quiz.
-              </p>
-            </div>
-          </div>
-          <div className={styles.action}>
-            <button className={`${styles.setupButton} ${styles.skipButton}`}>
-              Skip
-            </button>
-            <button
-              className={`${styles.setupButton} ${styles.nextButton}`}
-              onClick={handleNextClick}
-            >
-              Next
-            </button>
-          </div>
-        </>
-      ) : (
-        <Quiz />
-      )}
+    <div className={styles.choicesCont}>
+      <button onClick={onClick}>{text}</button>
+    </div>
     </>
+  
   );
 }
