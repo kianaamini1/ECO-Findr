@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "@/styles/PageHome.module.css";
 import Cards from "@/components/Cards"
 import Chips from "@/components/Chips";
+import { NavigationBar } from "@/components/Navigation";
 
 export default function Home() {
   return (
@@ -37,6 +38,7 @@ export default function Home() {
       <Cards title="Tree Planting" imgSrc="/images/tree-planting.jpeg" alt="tree-planting"/>
       <Cards title="Picnic" imgSrc="/images/picnic.jpeg" alt="picnic"/>
       </div>
+      <NavigationBar/>
      
       </main>
     </>
