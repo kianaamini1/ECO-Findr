@@ -27,19 +27,19 @@ export function NavigationBar() {
           <UilEstate className={styles.icon} />
         </button>
       </Link>
-      <Link href="/Page-Home">
+      <Link href="/Map">
         <button
           className={
-            selectedButton === "location"
+            selectedButton === "map"
               ? styles.selectedButton
               : styles.button
           }
-          onClick={() => handleButtonClick("location")}
+          onClick={() => handleButtonClick("map")}
         >
           <UilLocationPoint className={styles.icon} />
         </button>
       </Link>
-      <Link href="/Page-Home">
+      <Link href="/Calendar">
         <button
           className={
             selectedButton === "calender"
@@ -51,7 +51,7 @@ export function NavigationBar() {
           <UilSchedule className={styles.icon} />
         </button>
       </Link>
-      <Link href="/Quiz">
+      <Link href="/Profile">
         <button
           className={
             selectedButton === "profile" ? styles.selectedButton : styles.button

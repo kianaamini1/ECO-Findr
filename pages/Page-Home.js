@@ -38,6 +38,7 @@ export default function Home() {
       <Cards title="Tree Planting" imgSrc="/images/tree-planting.jpeg" alt="tree-planting"/>
       <Cards title="Picnic" imgSrc="/images/picnic.jpeg" alt="picnic"/>
       </div>
+      
       <NavigationBar/>
      
       </main>
