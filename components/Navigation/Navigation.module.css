@@ -8,7 +8,7 @@
     z-index: 99999;
     justify-content: space-around;
     align-items: center;
-    }
+ }
     
 .button {
     border: none;
@@ -18,13 +18,13 @@
 .selectedButton {
     background: linear-gradient(to right, var(--lightGreen), var(--lightGreen));
     border: none;
-    box-shadow: 0 0 5px 2px var(--lightGreen); 
+    /* box-shadow: 0 0 5px 2px var(--lightGreen); */
     border-radius: 40%;
-    }
+}
     
 .icon {
-    color: white;
-    width: 52px;
-    height: 52px;
-    padding: 0px 8px;
-    }
+color: white;
+width: 52px;
+height: 52px;
+padding: 0px 8px;
+}

@@ -3,9 +3,14 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
   min-height: 80vh;
 }
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+
 .cards {
   margin-top: 65px;
 }
@@ -15,8 +20,12 @@
   margin-right: 20px;
 }
 
-.chips {
-  align-items: center;
-  text-wrap: nowrap;
+.chipsWrapper {
+  width: 100%;
+  overflow-x: auto;
 }
 
+.chips {
+  display: flex;
+  justify-content: center;
+}

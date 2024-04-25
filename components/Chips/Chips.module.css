@@ -7,15 +7,16 @@
     border-color: var(--lightGreen);
     border-radius: 5px;
     margin: 7px;
-    
-}
-.chipCard:hover {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+  .chipCard:hover {
     background-color: var(--darkGreen);
     border-color: var(--darkGreen);
     color: var(--white);
-}
-
-.chipCard:active {
+  }
+  
+  .chipCard:active {
     background-color: var(--darkGreen);
     color: var(--white);
-}
+  }

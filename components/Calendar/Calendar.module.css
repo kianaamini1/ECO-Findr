@@ -1,0 +1,39 @@
+.box {
+    display: flex;
+    flex-direction: column;
+    width: 341px;
+    min-width: inherit;
+    height: 292px;
+    border-radius: 23px;
+    background-color: var(--paleGreen);
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+  
+  .event {
+    display: flex;
+    width: 324px;
+    height: 82px;
+    border-radius: 15px;
+    background-color: var(--midGreen);
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .info {
+    font: "Figtree";
+    font-weight: 400;
+    size: 16px;
+    line-height: 25px;
+    color: var(--white);
+    flex-grow: 1;
+  }
+  
+  .date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+  }

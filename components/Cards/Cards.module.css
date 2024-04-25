@@ -21,7 +21,8 @@
     height: 143px;
     border-radius: 20px;
     margin-top: -10px;
-    background-color: var(--lightYellow)
+    background-color: var(--lightYellow);
+    text-align: left;
   }
   
   .h2 {

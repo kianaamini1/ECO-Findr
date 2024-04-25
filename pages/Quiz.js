@@ -31,6 +31,7 @@ const questions = [
   },
 ];
 
+
 const QuizPage = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
