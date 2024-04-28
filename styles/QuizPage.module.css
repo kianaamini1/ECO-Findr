@@ -8,7 +8,43 @@
   min-height: 80vh;
   background-image: url('/images/landing-page.jpeg');
   background-size: cover;
-  background-position: center top;
+  background-position: center;
+  position: relative;
+}
+
+.quizCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 220px;
+}
+
+.indicatorsQuiz {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  top: 150px;
+}
+
+.quizIndicator {
+  width: 60px;
+  height: auto;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.active {
+  opacity: 1;
+}
+
+.inactive {
+  opacity: 0.5;
+}
+
+.clickable {
+  cursor: pointer;
 }
 
   /* Media query for smaller screens */
