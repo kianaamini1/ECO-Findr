@@ -1,31 +1,30 @@
 .Cards {
-    display: flex;
-    flex-direction: column;
-    width: 353px;
-    height: 360px;
-    align-items: center;
-    margin-bottom: 60px;
-    
-  }
-  
-  .cardImage {
-    border-radius: 2rem;
-    width: 365px;
-    height: 190px;
-    z-index: 99999;
-    align-content: center;
-  }
-  
-  .bottomTitle {
-    width: 353px;
-    height: 143px;
-    border-radius: 20px;
-    margin-top: -10px;
-    background-color: var(--lightYellow);
-    text-align: left;
-  }
-  
-  .h2 {
-    padding-left: 20px;
-    font-size: 24px;
-  }
+  display: flex;
+  flex-direction: column;
+  width: 353px;
+  height: 360px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.cardImage {
+  border-radius: 2rem;
+  width: 365px;
+  height: 190px;
+  z-index: 99999;
+  align-content: center;
+}
+
+.bottomTitle {
+  width: 353px;
+  height: 143px;
+  border-radius: 20px;
+  margin-top: -10px;
+  background-color: var(--lightYellow);
+  text-align: left;
+}
+
+.h2 {
+  padding-left: 20px;
+  font-size: 24px;
+}

@@ -6,7 +6,7 @@ import {
   UilLocationPoint,
   UilSchedule,
   UilUserCircle,
-} from "@iconscout/react-unicons";
+} from '@iconscout/react-unicons';
 
 export function NavigationBar() {
   const [selectedButton, setSelectedButton] = useState(null);

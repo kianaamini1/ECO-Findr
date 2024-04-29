@@ -35,14 +35,15 @@
 }
 
 /* Styles for buttons */
-.button, .buttonTwo {
+.button,
+.buttonTwo {
   padding: 15px 40px;
   cursor: pointer;
   border-radius: 25px;
   font-size: var(--button-fontsize);
   width: 200px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .buttonTwo {
@@ -75,8 +76,8 @@
 @media (min-width: 1024px) {
   .main {
     background-image: url('/images/landing-page.jpeg'), linear-gradient(to bottom, var(--lightYellow), var(--lightGreen));
-    background-size: contain;
     background-repeat: no-repeat;
     background-position: center top, center;
+    background-size: contain;
   }
 }

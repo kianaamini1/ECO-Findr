@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './LargeButton.module.css'; 
+import styles from './LargeButton.module.css';
 
 const LargeButton = ({ className, text }) => {
   return (

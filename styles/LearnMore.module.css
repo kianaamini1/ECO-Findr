@@ -1,0 +1,15 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80vh;
+    font-family: "Figtree", sans-serif;
+}
+
+.menuIcon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+}

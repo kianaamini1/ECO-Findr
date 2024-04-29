@@ -23,7 +23,7 @@ const Home = () => {
           <Link href="/Quiz">
             <Button className={styles.button} text="Get Started &#8594;" />
           </Link>
-          <Link href="/Tutorial">
+          <Link href="/Profile">
             <Button className={styles.buttonTwo} text="Tutorial" />
           </Link>
         </div>

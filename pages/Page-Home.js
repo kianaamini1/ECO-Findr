@@ -2,9 +2,17 @@ import Head from "next/head";
 import styles from "@/styles/PageHome.module.css";
 import Cards from "@/components/Cards";
 import Chips from "@/components/Chips";
+import React, { useState } from 'react';
+import HamburgerMenu from "@/components/HamburgerMenu";
 import { NavigationBar } from "@/components/Navigation";
 
 export default function Home() {
+  const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
+
+  const toggleHamburgerMenu = () => {
+    setShowHamburgerMenu(!showHamburgerMenu);
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -14,6 +22,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} `}>
+        <img src={"/images/hamburgerMenu.png"}
+          className={styles.menuIcon}
+          width="40px"
+          height="auto"
+          alt="hamburger menu"
+          onClick={toggleHamburgerMenu} />
+        {showHamburgerMenu && <HamburgerMenu closeMenu={toggleHamburgerMenu} />}
         <div className={styles.chipsWrapper}>
           <div className={styles.chips}>
             <Chips buttonText={"Biking"} />
@@ -25,7 +40,6 @@ export default function Home() {
             <Chips buttonText={"Group"} />
           </div>
         </div>
-
         <div className={styles.cards}>
           <h3 className={styles.h3}>Upcoming Events</h3>
           <Cards
@@ -59,7 +73,6 @@ export default function Home() {
           />
           <Cards title="Picnic" imgSrc="/images/picnic.jpeg" alt="picnic" />
         </div>
-
         <NavigationBar />
       </main>
     </div>

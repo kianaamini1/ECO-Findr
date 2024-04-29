@@ -31,7 +31,6 @@ const questions = [
   },
 ];
 
-
 const QuizPage = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
 
@@ -51,11 +50,13 @@ const QuizPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+      <main className={`${styles.main} `}>
         <div className={styles.indicatorsQuiz}>
           {questions.map((question, index) => (
-            <img key={question.id}
-              className={`${styles.quizIndicator} ${currentQuestionIndex === index ? styles.active : styles.inactive}
+            <img
+              key={question.id}
+              className={`${styles.quizIndicator} ${currentQuestionIndex === index ? styles.active : styles.inactive
+                }
               ${index <= currentQuestionIndex ? styles.clickable : " "}`}
               src={"/images/indicator.png"}
               width="60px"
@@ -65,7 +66,8 @@ const QuizPage = () => {
                 if (index <= currentQuestionIndex) {
                   setCurrentQuestionIndex(index);
                 }
-              }} />
+              }}
+            />
           ))}
         </div>
         <div className={styles.quizCont}>
