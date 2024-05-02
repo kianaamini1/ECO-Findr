@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import CalendarComponent from "../components/Calendar";
-import UpcomingEvent from "../components/Calendar/upcoming-event";
+import { UpcomingEvent } from "../components/Calendar/upcoming-event";
 import { NavigationBar } from "@/components/Navigation";
 import styles from "@/styles/Calendar.module.css";
 
