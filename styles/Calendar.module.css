@@ -7,7 +7,7 @@
 
 .menuIcon {
   position: absolute;
-  top: 30px;
+  top: 40px;
   right: 30px;
 }
 
@@ -24,4 +24,18 @@
 .content {
   display: flex;
   flex-direction: column;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 428px) {}
+
+/* Media query for larger screens */
+@media (min-width: 1024px) {
+
+    .menuIcon {
+        position: absolute;
+        top: 30px;
+        right: 650px;
+        cursor: pointer;
+    }
 }

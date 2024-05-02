@@ -87,18 +87,22 @@
 
 .createButton {
   display: flex;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   background-color: var(--darkGreen);
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
+  position: fixed;
+  right: 650px;
+  bottom: 100px;
 }
+
 .createButton:hover {
   display: flex;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   background-color: var(--lightGreen);
   align-items: center;
@@ -194,7 +198,7 @@
   align-items: center;
 }
 
-.eventLabelInput > label {
+.eventLabelInput>label {
   font-size: 14px;
 }
 
@@ -219,6 +223,7 @@
   color: var(--white);
   text-decoration: none;
 }
+
 .createActive:hover {
   color: var(--darkGreen);
   text-decoration: none;

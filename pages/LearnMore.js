@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { NavigationBar } from "@/components/Navigation";
 import styles from "@/styles/LearnMore.module.css";
 import HamburgerMenu from "@/components/HamburgerMenu";
+import DoughnutChart from "@/components/DonutChart";
+import Pie from "@/components/PieChart";
 
 const LearnMore = () => {
     const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
@@ -26,8 +28,22 @@ const LearnMore = () => {
                     height="auto"
                     alt="hamburger menu"
                     onClick={toggleHamburgerMenu} />
+                <div className={`${styles.contentWrapper} contentWrapper`}>
                 {showHamburgerMenu && <HamburgerMenu closeMenu={toggleHamburgerMenu} />}
-                <NavigationBar />
+                <h2>Charts</h2>   
+                    <div className={styles.chartsWrapper}>
+                        <div className={styles.doughnutChart} >
+                        <h4>Environmental Engagement in Canada</h4>
+                            <DoughnutChart />
+                        </div>
+                        <div className={styles.pieChart} >
+                            <h4>Single-use plastics in Canada</h4>
+                            <Pie />
+                        
+                        </div>
+                    </div>
+                    <NavigationBar />
+                </div>
             </main>
         </>
     );
