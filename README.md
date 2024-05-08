@@ -21,8 +21,14 @@
 
 ### Hamburger Menu
 
-- Mini Game:
+- Mini Game: 
 - Quiz: If you want to retake the quiz, you can have access it from the menu.
 - Tutorial Page: If need help with the app, you can access the tutorial page again at any time from the menu.
 - Learn More: Has some graphs related to environmental data collected from statistics Canada
 - Settings:
+
+### Installations
+- charts.js
+- react-unicons
+- primeicons
+- 

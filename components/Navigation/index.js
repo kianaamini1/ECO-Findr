@@ -27,7 +27,7 @@ export function NavigationBar() {
           <UilEstate className={styles.icon} />
         </button>
       </Link>
-      <Link href="/Map">
+      <Link href="/Page-Map">
         <button
           className={
             selectedButton === "map" ? styles.selectedButton : styles.button

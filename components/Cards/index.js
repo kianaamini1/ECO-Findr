@@ -7,6 +7,7 @@ export default function Cards({ title, imgSrc, alt }) {
       <img className={styles.cardImage} src={imgSrc} alt={alt} />
       <div className={styles.bottomTitle}>
         <h2 className={styles.h2}>{title}</h2>
+      
       </div>
     </div>
   );

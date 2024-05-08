@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@iconscout/react-unicons": "^2.0.2",
+    "@react-google-maps/api": "^2.19.3",
     "chart.js": "^4.4.2",
     "next": "14.1.4",
     "primeicons": "^7.0.0",

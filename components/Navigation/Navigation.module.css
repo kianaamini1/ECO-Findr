@@ -19,7 +19,7 @@
     background: linear-gradient(to right, var(--lightGreen), var(--lightGreen));
     border: none;
     /* box-shadow: 0 0 5px 2px var(--lightGreen); */
-    border-radius: 40%;
+    border-radius: 50%;
 }
 
 .icon {
@@ -31,10 +31,6 @@
 
 /* Media query for larger screens */
 @media (min-width: 1024px) {
-    .main {
-        background: linear-gradient(to bottom, var(--lightYellow), var(--lightGreen));
-    }
-
     .container {
         max-width: 430px;
     }

@@ -1,5 +1,5 @@
 .main {
-  display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -7,25 +7,21 @@
     font-family: "Figtree", sans-serif;
 }
 
+.contentWrapper {
+    width: 430px;
+    height: 932px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .menuIcon {
-  position: absolute;
-  top: 40px;
-  right: 30px;
-}
-
-.container {
-  margin: 0 auto;
-  text-align: center;
-}
-
-.h3 {
-  text-align: left;
-  margin-right: 20px;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    cursor: pointer;
 }
 
 /* Media query for smaller screens */
@@ -33,6 +29,9 @@
 
 /* Media query for larger screens */
 @media (min-width: 1024px) {
+    .main {
+        background: linear-gradient(to bottom, var(--lightYellow), var(--lightGreen));
+    }
 
     .menuIcon {
         position: absolute;
