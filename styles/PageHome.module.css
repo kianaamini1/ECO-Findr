@@ -51,4 +51,10 @@
         right: 650px;
         cursor: pointer;
     }
+
+    .chipsWrapper {
+      margin-top: 100px;
+      max-width: 430px;
+      overflow-x: auto;
+    }
 }

@@ -6,6 +6,8 @@ import { NavigationBar } from "@/components/Navigation";
 import styles from "@/styles/Calendar.module.css";
 
 const CalendarPage = () => {
+
+
   return (
     <div className={styles.container}>
       <Head>
@@ -14,7 +16,8 @@ const CalendarPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+      <main className={`${styles.main} `}>
+    
         <div className={styles.content}>
           <CalendarComponent />
           <div className={styles.upcoming}>

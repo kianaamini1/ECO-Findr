@@ -5,6 +5,7 @@ import Chips from "@/components/Chips";
 import React, { useState } from 'react';
 import HamburgerMenu from "@/components/HamburgerMenu";
 import { NavigationBar } from "@/components/Navigation";
+import { SearchBar } from "@/components/SearchBar";
 
 export default function Home() {
   const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
@@ -29,6 +30,9 @@ export default function Home() {
           alt="hamburger menu"
           onClick={toggleHamburgerMenu} />
         {showHamburgerMenu && <HamburgerMenu closeMenu={toggleHamburgerMenu} />}
+        <div>
+        <SearchBar/>
+        </div>
         <div className={styles.chipsWrapper}>
           <div className={styles.chips}>
             <Chips buttonText={"Biking"} />
