@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import styles from "./Cards.module.css";
 
-export default function Cards({ title, location, date, time, imgSrc, alt }) {
+export default function Cards({ title, description, location, date, time, imgSrc, alt }) {
   return (
     <div className={styles.Cards}>
       <img className={styles.cardImage} src={imgSrc} alt={alt} />
@@ -13,10 +13,11 @@ export default function Cards({ title, location, date, time, imgSrc, alt }) {
             <button className={styles.joinButton}>JOIN</button>
           </Link>
         </div>
+        <div>
         <p className={styles.description}>
-          Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-          vulputate libero et velit interdum, ac aliquet odio mattis.{" "}
+          {description}
         </p>
+        </div>
         <div className={styles.generalInfo}>
           <div className={`${styles.location} ${styles.item}`}>
             <span>Location: </span>

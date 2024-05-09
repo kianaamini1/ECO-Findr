@@ -2,16 +2,30 @@ import Head from "next/head";
 import styles from "@/styles/PageHome.module.css";
 import Cards from "@/components/Cards";
 import Chips from "@/components/Chips";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import HamburgerMenu from "@/components/HamburgerMenu";
 import { NavigationBar } from "@/components/Navigation";
 import { SearchBar } from "@/components/SearchBar";
+import sampleEvents from "@/public/samples/events";
 
 export default function Home() {
   const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
 
   const toggleHamburgerMenu = () => {
     setShowHamburgerMenu(!showHamburgerMenu);
+  };
+
+  const [filteredEvents, setFilteredEvents] = useState(sampleEvents);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearch = (searchTerm) => {
+    setSearchTerm(searchTerm);
+
+    const filteredItems = sampleEvents.filter((event) =>
+      event.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    setFilteredEvents(filteredItems);
   };
 
   return (
@@ -23,16 +37,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} `}>
-        <img src={"/images/hamburgerMenu.png"}
+        <img
+          src={"/images/hamburgerMenu.png"}
           className={styles.menuIcon}
           width="40px"
           height="auto"
           alt="hamburger menu"
-          onClick={toggleHamburgerMenu} />
+          onClick={toggleHamburgerMenu}
+        />
         {showHamburgerMenu && <HamburgerMenu closeMenu={toggleHamburgerMenu} />}
-        <div>
-        <SearchBar/>
-        </div>
+        <SearchBar onSearch={handleSearch} />
         <div className={styles.chipsWrapper}>
           <div className={styles.chips}>
             <Chips buttonText={"Biking"} />
@@ -46,39 +60,21 @@ export default function Home() {
         </div>
         <div className={styles.cards}>
           <h3 className={styles.h3}>Upcoming Events</h3>
-          <Cards
-            title="Community Clean Up"
-            imgSrc="/images/Clean-Up.jpeg"
-            alt="Clean-up"
-          />
-          <Cards title="Biking" imgSrc="/images/biking.jpeg" alt="biking" />
-          <Cards
-            title="Gardening"
-            imgSrc="/images/gardening.jpeg"
-            alt="gardening"
-          />
-          <Cards title="Fishing" imgSrc="/images/fishing.jpeg" alt="fishing" />
-          <Cards title="Hike" imgSrc="/images/hiking.jpeg" alt="hike" />
-          <Cards
-            title="Baking Class"
-            imgSrc="/images/baking.webp"
-            alt="baking"
-          />
-          <Cards
-            title="Swap Sale"
-            imgSrc="/images/garage-sale.jpeg"
-            alt="swap-sale"
-          />
-          <Cards title="Outdoor Yoga" imgSrc="/images/yoga.jpeg" alt="yoga" />
-          <Cards
-            title="Tree Planting"
-            imgSrc="/images/tree-planting.jpeg"
-            alt="tree-planting"
-          />
-          <Cards title="Picnic" imgSrc="/images/picnic.jpeg" alt="picnic" />
+          {filteredEvents.map((event) => (
+            <Cards
+              title={event.title}
+              description={event.description}
+              location={event.location}
+              date={event.date}
+              time={event.time}
+              imgSrc={event.imgSrc}
+              alt={event.alt}
+            />
+          ))}
         </div>
         <NavigationBar />
       </main>
     </div>
   );
+  
 }

@@ -1,10 +1,11 @@
+
 .main {
   display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 80vh;
-    font-family: "Figtree", sans-serif;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80vh;
+  font-family: "Figtree", sans-serif;
 }
 
 .menuIcon {
@@ -18,6 +19,12 @@
   text-align: center;
 }
 
+.heading {
+  font-weight: 600;
+  font-size: 24px;
+  font: "Figtree";
+}
+
 .h3 {
   text-align: left;
   margin-right: 20px;
@@ -29,15 +36,16 @@
 }
 
 /* Media query for smaller screens */
-@media (max-width: 428px) {}
+@media (max-width: 428px) {
+}
 
 /* Media query for larger screens */
 @media (min-width: 1024px) {
-
-    .menuIcon {
-        position: absolute;
-        top: 30px;
-        right: 650px;
-        cursor: pointer;
-    }
+  .menuIcon {
+    position: absolute;
+    top: 30px;
+    right: 650px;
+    cursor: pointer;
+  }
 }
+
