@@ -21,10 +21,9 @@ export function QuizSetup({ question, handleAnswerClick }) {
 export function Choices({ text, onClick }) {
   return (
     <>
-    <div className={styles.choicesCont}>
-      <button onClick={onClick}>{text}</button>
-    </div>
+      <div className={styles.choicesCont}>
+        <button onClick={onClick}>{text}</button>
+      </div>
     </>
-  
   );
 }

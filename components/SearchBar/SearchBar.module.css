@@ -1,5 +1,7 @@
 .searchBar {
     position: relative;
+    margin-top: 20px;
+    margin-bottom: -80px;
   }
   
   .searchBarInput {

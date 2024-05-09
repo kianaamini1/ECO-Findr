@@ -56,7 +56,7 @@ export default function PieChart() {
         responsive: true,
       },
     });
-  });
+  }, []);
   return (
     <>
       <div>

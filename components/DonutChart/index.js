@@ -20,7 +20,11 @@ export default function DoughnutChart() {
 
   useEffect(() => {
     setChartData({
-      labels: ["Engaged, without pay", "Did not engage, without pay", "Participated, without pay",],
+      labels: [
+        "Engaged, without pay",
+        "Did not engage, without pay",
+        "Participated, without pay",
+      ],
       datasets: [
         {
           label: "Environmental Engagement in Canada",
@@ -48,14 +52,14 @@ export default function DoughnutChart() {
         responsive: true,
       },
     });
-  });
+  }, []);
   return (
     <>
       <div>
         <Doughnut
           data={chartData}
           options={chartOptions}
-          style={{ width: "300px", height: "300px"}}
+          style={{ width: "300px", height: "300px" }}
         />
       </div>
     </>

@@ -101,7 +101,9 @@ const OverlaySidebar = ({ isOpen, onClose, events, setEvents }) => {
         <div className={styles.head}>
           <span className={styles.newEventHeader}>New Event</span>
           {areAllFieldsFilled() ? (
-            <a className={styles.createActive} onClick={handleCreateClick}>Create</a>
+            <a className={styles.createActive} onClick={handleCreateClick}>
+              Create
+            </a>
           ) : (
             <span className={styles.createInactive}>Create</span>
           )}
@@ -114,7 +116,8 @@ const OverlaySidebar = ({ isOpen, onClose, events, setEvents }) => {
               value={inputValues.title}
               placeholder="Title"
               className={`${styles.eventTitle} ${styles.eventInput}`}
-              onChange={handleInputChange} />
+              onChange={handleInputChange}
+            />
             <hr className={styles.divider} />
             <input
               type="text"
@@ -157,7 +160,8 @@ const OverlaySidebar = ({ isOpen, onClose, events, setEvents }) => {
                 id="calendar-timeonly-12h"
                 value={startTime}
                 onChange={(e) => setStartTime(e.value)}
-                timeOnly />
+                timeOnly
+              />
             </div>
             <hr className={styles.divider} />
             <div className={styles.eventLabelInput}>

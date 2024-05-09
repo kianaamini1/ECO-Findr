@@ -45,7 +45,7 @@ const QuizPage = () => {
     setShowLoading(true);
     setTimeout(() => {
       setShowLoading(true);
-    }, 2000)
+    }, 4000)
   };
 
   const handleAnswerClick = (answer) => {
