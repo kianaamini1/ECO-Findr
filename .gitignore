@@ -92,3 +92,7 @@ pinegrow.json
 
 # Blender
 *.blend1
+
+# local env files
+.env*.local
+.env

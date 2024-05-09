@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { NavigationBar } from "@/components/Navigation";
 import HamburgerMenu from "@/components/HamburgerMenu";
 import styles from "@/styles/PageMap.module.css";
+import Map from "@/components/Map";
 
 const MapPage = () => {
   const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
@@ -28,6 +29,7 @@ const MapPage = () => {
           onClick={toggleHamburgerMenu} />
         <div className={`${styles.contentWrapper} contentWrapper`}>
           {showHamburgerMenu && <HamburgerMenu closeMenu={toggleHamburgerMenu} />}
+          <Map address="3700 Willingdon Ave, Burnaby, BC V5G 3H2" />
         </div>
         <NavigationBar />
       </main>
