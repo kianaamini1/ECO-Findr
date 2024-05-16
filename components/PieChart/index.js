@@ -27,6 +27,7 @@ export default function PieChart() {
         "Rarely used own bags or containers",
         "Did not use own bags or containers",
       ],
+
       datasets: [
         {
           label: "Single-use plastics in Canada",
@@ -38,23 +39,29 @@ export default function PieChart() {
             "rgb(247, 239, 218)",
             "rgb(70, 111, 85)",
           ],
+          borderRadius: 10,
         },
       ],
     });
 
     setchartOptions({
       indexAxis: "y",
-      plugin: {
+      plugins: {
         legend: {
-          position: "bottom",
+          position: "top",
         },
         title: {
           display: true,
           text: "Single-use plastics in Canada",
         },
-        maintainAspectRatio: false,
-        responsive: true,
+        tooltip: {
+          bodyFontStyle: {
+            borderRadius: 10,
+          },
+        },
       },
+      maintainAspectRatio: true,
+      responsive: false,
     });
   }, []);
   return (
@@ -68,4 +75,4 @@ export default function PieChart() {
       </div>
     </>
   );
-}
+};

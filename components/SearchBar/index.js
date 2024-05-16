@@ -4,11 +4,20 @@ import { UilSearchAlt } from "@iconscout/react-unicons";
 
 export function SearchBar({ onSearch }) {
   const [searchItem, setSearchItem] = useState("");
+  const [isActive, setIsActive] = useState(false);
 
   const handleInputChange = (e) => {
     const searchTerm = e.target.value;
     setSearchItem(searchTerm);
     onSearch(searchTerm);
+  };
+
+  const handleSearchBarClick = () => {
+    setIsActive(true);
+  };
+
+  const handleInputBlur = () => {
+    setIsActive(false);
   };
 
   return (
@@ -19,8 +28,10 @@ export function SearchBar({ onSearch }) {
         value={searchItem}
         onChange={handleInputChange}
         placeholder="Type to search"
+        onClick={handleSearchBarClick}
+        onBlur={handleInputBlur}
       />
-      <UilSearchAlt className={styles.searchIcon} />
+      {!isActive && <UilSearchAlt className={styles.searchIcon} />}
     </div>
   );
 }

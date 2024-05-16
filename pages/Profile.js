@@ -20,24 +20,26 @@ const Profile = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} `}>
-        <img src={"/images/hamburgerMenu.png"}
-          className={styles.menuIcon}
-          width="40px"
-          height="auto"
-          alt="hamburger menu"
-          onClick={toggleHamburgerMenu} />
-        <div className={`${styles.contentWrapper} contentWrapper`}>
-          {showHamburgerMenu && <HamburgerMenu closeMenu={toggleHamburgerMenu} />}
-          <div className={styles.profileCont}>
-            <img className={styles.profileImg} src="/images/blank-profile.webp" width={100} height={100} />
-            <div className={styles.lgBtnCont}>
-              <LargeButton className={styles.lgBtn} text="Saved Events" />
-              <LargeButton text="Event History" />
+      <main className={`${styles.main}`}>
+        <div className={styles.container}>
+          <img src={"/images/hamburgerMenu.png"}
+            className={styles.menuIcon}
+            width="40px"
+            height="auto"
+            alt="hamburger menu"
+            onClick={toggleHamburgerMenu} />
+          <div className={styles.contentWrapper}>
+            {showHamburgerMenu && <HamburgerMenu closeMenu={toggleHamburgerMenu} />}
+            <div className={styles.profileCont}>
+              <img className={styles.profileImg} src="/images/blank-profile.webp" width={100} height={100} />
+              <div className={styles.lgBtnCont}>
+                <LargeButton className={styles.lgBtn} text="Saved Events" />
+                <LargeButton text="Event History" />
+              </div>
             </div>
           </div>
+          <NavigationBar />
         </div>
-        <NavigationBar />
       </main>
     </>
   );

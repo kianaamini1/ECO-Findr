@@ -6,7 +6,7 @@ import styles from "@/styles/Landing.module.css";
 
 const Home = () => {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Eco Findr</title>
         <meta name="description" content="Welcome to the Quiz App" />
@@ -14,21 +14,24 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main}`}>
-        <h1 className={styles.appName}>
-          Eco
-          <br />
-          Findr
-        </h1>
-        <div className={styles.buttonContainer}>
-          <Link href="/Quiz">
-            <Button className={styles.button} text="Get Started &#8594;" />
-          </Link>
-          <Link href="/Profile">
-            <Button className={styles.buttonTwo} text="Tutorial" />
-          </Link>
+        <div className={styles.container}>
+          <h1 className={styles.appName}>
+            Eco
+            <br />
+            Findr
+          </h1>
+          <div className={styles.buttonContainer}>
+            <Link href="/Quiz">
+              <Button className={styles.button} text="Get Started &#8594;" />
+            </Link>
+            <Link href="/Profile">
+              <Button className={styles.buttonTwo} text="Tutorial" />
+            </Link>
+          </div>
         </div>
+
       </main>
-    </div>
+    </>
   );
 };
 

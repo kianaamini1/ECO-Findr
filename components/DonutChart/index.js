@@ -34,13 +34,14 @@ export default function DoughnutChart() {
             "rgb(221, 229, 214, 0.8)",
             "rgb(156, 192, 137, 0.8)",
           ],
+          borderRadius: 15,
         },
       ],
     });
 
     setchartOptions({
       indexAxis: "y",
-      plugin: {
+      plugins: {
         legend: {
           position: "top",
         },
@@ -48,9 +49,14 @@ export default function DoughnutChart() {
           display: true,
           text: "Environmental Engagement in Canada",
         },
+        tooltip: {
+          bodyFontStyle: {
+            borderRadius: 20,
+          },
+        },
+      },
         maintainAspectRatio: false,
         responsive: true,
-      },
     });
   }, []);
   return (
@@ -64,4 +70,4 @@ export default function DoughnutChart() {
       </div>
     </>
   );
-}
+};

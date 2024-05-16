@@ -7,6 +7,10 @@
   margin-bottom: 60px;
 }
 
+.imageContainer {
+  position: relative;
+}
+
 .cardImage {
   border-radius: 2rem;
   width: 365px;
@@ -15,12 +19,56 @@
   align-content: center;
 }
 
+.favoriteBTN {
+  position: absolute;
+  width: 44px;
+  height: 28px;
+  margin-top: 12px;
+  margin-left: -58px;
+  border-radius: 135px;
+}
+
+.favoriteIconClicked {
+  color: black;
+}
+
 .cardInfo {
   width: 353px;
   border-radius: 20px;
   margin-top: -15px;
   background-color: var(--lightYellow);
   text-align: left;
+}
+
+.popup {
+  width: 350px;
+  height: 62px;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--lightGreen);
+}
+
+.popupContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.joinContent {
+  display: flex;
+  align-items: center;
+}
+
+.viewContent {
+  display: flex;
+  align-items: center;
+}
+
+.viewContent>* {
+  text-decoration: none;
+  color: inherit;
 }
 
 .headInfo {
@@ -40,6 +88,9 @@
   border-radius: 5px;
   /* margin-top: 40px; */
 }
+
+;
+
 .joinButton:hover {
   width: 66px;
   height: 22px;

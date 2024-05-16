@@ -3,55 +3,115 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
+    max-height: 120vh;
     font-family: "Figtree", sans-serif;
-    overflow-x: auto;
 }
 
 .menuIcon {
-    position: absolute;
+    position: fixed;
     top: 40px;
     right: 30px;
-    cursor: pointer;
+    max-width: 430px;
 }
 
 .chartsWrapper {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-top: 0px;
-    width: auto;
-    overflow-x: auto;
+    max-width: auto;
+    margin-bottom: 100px;
 }
 
-.doughnutChart {
-        text-align: center;
-        background-color: rgb(221, 229, 214, 0.3);
-        border-radius: 15px;
-        padding: 10px;
-        padding-bottom: 25px;
-        overflow-x: auto;
-}
-
+.doughnutChart,
 .pieChart {
     text-align: center;
-    background-color: rgb(221, 229, 214, 0.3);
+    background-color: rgba(221, 229, 214, 0.3);
     border-radius: 15px;
     padding: 10px;
     padding-bottom: 25px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 430px;
+    max-height: auto;
+    background-color: var(--white);
+    text-align: center;
     overflow-x: auto;
+    overflow-y: auto;
+}
+
+.chartsWrapper h2 {
+    margin-top: 60px;
+}
+
+.chartsWrapper p {
+    margin-bottom: 0px;
+    margin-top: -20px;
 }
 
 /* Media query for smaller screens */
-@media (max-width: 428px) {
+@media only screen and (min-device-width: 428px) and (max-device-width: 926px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
+    .contentWrapper {
+        width: 430px;
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+
+    .menuIcon {
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        z-index: 1;
+    }
 
 }
+
 /* Media query for larger screens */
-@media (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
+    .main {
+        background: linear-gradient(to bottom, var(--lightYellow), var(--lightGreen));
+        position: relative;
+    }
+
     .menuIcon {
-        position: absolute;
+        position: fixed;
         top: 30px;
         right: 650px;
         cursor: pointer;
+    }
+
+    .chartsWrapper {
+        max-width: 100%;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contentWrapper {
+        width: 430px;
+        height: auto;
+        background-color: var(--white);
+        overflow-y: auto;
+        overflow-x: auto;
+    }
+
+    .chartsWrapper h2 {
+        margin-top: 60px;
+    }
+
+    .chartsWrapper p {
+        margin-bottom: 0px;
+        margin-top: -20px;
+    }
+
+    .doughnutChart,
+    .pieChart {
+        width: 430px;
     }
 }

@@ -1,4 +1,3 @@
-
 .main {
   display: flex;
   flex-direction: column;
@@ -8,15 +7,15 @@
   font-family: "Figtree", sans-serif;
 }
 
+.container {
+  margin: 0;
+  text-align: center;
+}
+
 .menuIcon {
   position: absolute;
   top: 40px;
   right: 30px;
-}
-
-.container {
-  margin: 0 auto;
-  text-align: center;
 }
 
 .heading {
@@ -36,16 +35,59 @@
 }
 
 /* Media query for smaller screens */
-@media (max-width: 428px) {
+@media only screen and (min-device-width: 428px) and (max-device-width: 926px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80vh;
+    font-family: "Figtree", sans-serif;
+  }
+
+  .container {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .menuIcon {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+  }
+
+  .heading {
+    font-weight: 600;
+    font-size: 24px;
+    font: "Figtree";
+  }
+
+  .h3 {
+    text-align: left;
+    margin-right: 20px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    justify-content: space-between;
+  }
 }
 
 /* Media query for larger screens */
-@media (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .menuIcon {
     position: absolute;
     top: 30px;
     right: 650px;
     cursor: pointer;
   }
-}
 
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    justify-content: space-around;
+  }
+}

@@ -4,8 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 6rem;
-  min-height: 80vh;
+  min-height: 100vh;
   background-image: url('/images/landing-page.jpeg');
   background-size: cover;
   background-position: center;
@@ -59,7 +58,6 @@
   color: var(--white);
 }
 
-/* Buttons & Hover Effect */
 .buttonCont {
   display: flex;
   flex-direction: row;
@@ -70,8 +68,6 @@
   padding-top: 20px;
 }
 
-
-/* Styles for buttons */
 .button,
 .buttonTwo {
   padding: 15px 40px;
@@ -114,35 +110,12 @@
 }
 
 .quizCompleted {
-  margin-top: 0rem; 
+  margin-top: 0rem;
   margin-bottom: 3rem;
 }
 
-.loadingContainer {
-  max-width: 430px;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.loadingAnimation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loadingAnimation img {
-  width: 50px; 
-  height: 50px; 
-  margin: 0 10px;
-  animation: 40s infinite;
-}
-
-
 /* Media query for smaller screens */
-@media (max-width: 428px) {
+@media only screen and (min-device-width: 428px) and (max-device-width: 926px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
   .main {
     background-image: url('/images/landing-page.jpeg');
     background-size: cover;
@@ -151,11 +124,22 @@
 }
 
 /* Media query for larger screens */
-@media (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   .main {
     background-image: url('/images/landing-page.jpeg'), linear-gradient(to bottom, var(--lightYellow), var(--lightGreen));
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center top, center;
+  }
+
+  .loadingOverlay {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
   }
 }

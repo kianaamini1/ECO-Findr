@@ -1,9 +1,11 @@
 import styles from "./HamburgerMenu.module.css";
 import Link from "next/link";
-import { useState } from "react";
+import React, { useState } from 'react';
+import MusicPlayer from "@/components/MusicSwitch";
 
 const HamburgerMenu = ({ closeMenu }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMusicPlaying, setIsMusicPlaying] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -14,35 +16,36 @@ const HamburgerMenu = ({ closeMenu }) => {
     toggleMenu();
   };
 
+
   return (
     <>
-      <div className={`${styles.hamburgerMenu} ${isOpen ? styles.open : " "}`}>
+      <div className={`${styles.hamburgerMenu} ${isOpen ? styles.open : ""}`}>
         <div className={styles.menuCancel} onClick={closeMenuAndToggle}>
-          <img src={"/images/cancel.png"}
+          <img
+            src={"/images/cancel.png"}
             width="20px"
             height="auto"
-            alt="close menu" />
+            alt="close menu"
+          />
         </div>
         <div className={styles.menuCont}></div>
-        <Link href="/MiniGame">
-          <div className={styles.link}>Mini Game</div>
+        <Link className={styles.link} href="/MiniGame">
+          <div>Mini Game</div>
         </Link>
-        <Link href="/Quiz">
-          <div className={styles.link}>Quiz</div>
+        <Link className={styles.link} href="/Quiz">
+          <div>Quiz</div>
         </Link>
-        <Link href="/Tutorial">
-          <div className={styles.link}>Tutorial</div>
+        <Link className={styles.link} href="/Tutorial">
+          <div>Tutorial</div>
         </Link>
-        <Link href="/LearnMore">
-          <div className={styles.link}>Learn More</div>
+        <Link className={styles.link} href="/LearnMore">
+          <div>Learn More</div>
         </Link>
-        <Link href="/Settings">
-          <div className={styles.link}>Settings</div>
-        </Link>
+        <MusicPlayer />
         <div className={styles.hamburgerIcon} onClick={toggleMenu}></div>
       </div>
     </>
-  )
+  );
 };
 
 export default HamburgerMenu;

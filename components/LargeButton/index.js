@@ -1,11 +1,12 @@
-import React from 'react';
-import styles from './LargeButton.module.css';
+import React from "react";
+import Link from "next/link";
+import styles from "./LargeButton.module.css";
 
-const LargeButton = ({ className, text }) => {
+const LargeButton = ({ className, text, href }) => {
   return (
-    <button className={`${styles.largeButton} ${className}`}>
-      {text}
-    </button>
+    <Link href={href}>
+      <button className={`${styles.largeButton} ${className}`}>{text}</button>
+    </Link>
   );
 };
 

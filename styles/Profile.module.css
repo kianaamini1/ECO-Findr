@@ -7,6 +7,11 @@
     font-family: "Figtree", sans-serif;
 }
 
+.container {
+    margin: 0;
+    text-align: center;
+}
+
 .contentWrapper {
     width: 430px;
     height: 932px;
@@ -22,6 +27,7 @@
     top: 40px;
     right: 30px;
     cursor: pointer;
+    z-index: 1;
 }
 
 .profileImg {
@@ -45,18 +51,27 @@
 }
 
 /* Media query for smaller screens */
-@media (max-width: 428px) {}
+@media only screen and (min-device-width: 428px) and (max-device-width: 926px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
+    .menuIcon {
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        z-index: 1;
+    }
+}
 
 /* Media query for larger screens */
-@media (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
     .main {
         background: linear-gradient(to bottom, var(--lightYellow), var(--lightGreen));
+        position: relative;
     }
 
     .menuIcon {
-        position: absolute;
+        position: fixed;
         top: 30px;
         right: 650px;
         cursor: pointer;
+        z-index: 1;
     }
 }

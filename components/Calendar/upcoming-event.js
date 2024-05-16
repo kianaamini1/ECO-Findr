@@ -149,7 +149,6 @@ const OverlaySidebar = ({ isOpen, onClose, events, setEvents }) => {
                 onChange={(e) => setDate(e.value)}
                 dateFormat="DD, M mm, yy"
               />
-              {/* <style>{eventTimeStyles}</style> */}
             </div>
             <hr className={styles.divider} />
             <div className={styles.eventLabelInput}>
