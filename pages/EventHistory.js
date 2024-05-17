@@ -39,34 +39,41 @@ export default function Home() {
             <div className={styles.chips}></div>
           </div>
           <div className={styles.cards}>
-            <Cards
-              title="Community Clean Up"
-              imgSrc="/images/Clean-Up.jpeg"
-              alt="Clean-up"
+
+          <Cards
+              title="Tree Planting"
+              imgSrc="/images/tree-planting.jpeg"
+              alt="tree-planting"
             />
-            <Cards title="Biking" imgSrc="/images/biking.jpeg" alt="biking" />
+             <Cards title="Fishing" imgSrc="/images/fishing.jpeg" alt="fishing" />
             <Cards
               title="Gardening"
               imgSrc="/images/gardening.jpeg"
               alt="gardening"
             />
-            <Cards title="Fishing" imgSrc="/images/fishing.jpeg" alt="fishing" />
+      
             <Cards title="Hike" imgSrc="/images/hiking.jpeg" alt="hike" />
             <Cards
               title="Baking Class"
               imgSrc="/images/baking.webp"
               alt="baking"
             />
+
+            <Cards title="Biking" 
+            imgSrc="/images/biking.jpeg" 
+            alt="biking"
+             />
             <Cards
               title="Swap Sale"
               imgSrc="/images/garage-sale.jpeg"
               alt="swap-sale"
             />
             <Cards title="Outdoor Yoga" imgSrc="/images/yoga.jpeg" alt="yoga" />
+           
             <Cards
-              title="Tree Planting"
-              imgSrc="/images/tree-planting.jpeg"
-              alt="tree-planting"
+              title="Community Clean Up"
+              imgSrc="/images/Clean-Up.jpeg"
+              alt="Clean-up"
             />
             <Cards title="Picnic" imgSrc="/images/picnic.jpeg" alt="picnic" />
           </div>

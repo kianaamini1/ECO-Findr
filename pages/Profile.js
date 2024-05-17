@@ -33,8 +33,12 @@ const Profile = () => {
             <div className={styles.profileCont}>
               <img className={styles.profileImg} src="/images/blank-profile.webp" width={100} height={100} />
               <div className={styles.lgBtnCont}>
-                <LargeButton className={styles.lgBtn} text="Saved Events" />
-                <LargeButton text="Event History" />
+              <LargeButton
+                className={styles.lgBtn}
+                text="Saved Events"
+                href="TargetedPage"
+              />
+              <LargeButton text="Event History" href="/EventHistory"/>
               </div>
             </div>
           </div>
