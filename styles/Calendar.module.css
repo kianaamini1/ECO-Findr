@@ -3,12 +3,12 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 80vh;
+  min-height: 60vh;
   font-family: "Figtree", sans-serif;
 }
 
 .container {
-  margin: 0;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -16,12 +16,12 @@
   position: absolute;
   top: 40px;
   right: 30px;
+  cursor: pointer;
 }
 
 .heading {
   font-weight: 600;
   font-size: 24px;
-  font: "Figtree";
 }
 
 .h3 {
@@ -34,22 +34,16 @@
   flex-direction: column;
 }
 
+.contentWrapper {
+  width: 430px;
+  height: auto;
+  background-color: var(--white);
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
 /* Media query for smaller screens */
-@media only screen and (min-device-width: 428px) and (max-device-width: 926px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
-  .main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 80vh;
-    font-family: "Figtree", sans-serif;
-  }
-
-  .container {
-    margin: 0 auto;
-    text-align: center;
-  }
-
+@media only screen and (max-width: 1024px) {
   .menuIcon {
     position: absolute;
     top: 40px;
@@ -59,35 +53,50 @@
   .heading {
     font-weight: 600;
     font-size: 24px;
-    font: "Figtree";
+    margin-top: 60px;
   }
 
   .h3 {
     text-align: left;
-    margin-right: 20px;
+    margin-left: 20px;
   }
 
-  .content {
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    justify-content: space-between;
+  .contentWrapper {
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    margin-bottom: 20px;
   }
 }
 
 /* Media query for larger screens */
 @media only screen and (min-width: 1024px) {
+  .main {
+    background: linear-gradient(to bottom, var(--lightYellow), var(--lightGreen));
+    position: relative;
+    max-height: 932px;
+    overflow-y: hidden;  
+  }
+
   .menuIcon {
-    position: absolute;
     top: 30px;
     right: 650px;
-    cursor: pointer;
   }
 
   .content {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
     justify-content: space-around;
+    margin-top: 40px;
+  }
+
+  .contentWrapper {
+    max-width: 430px;
+    background-color: var(--white);
+    overflow-y: auto;
+    margin-bottom: 20px;
+    height: 100vh;
+  }
+
+  .h3 {
+    margin-left: 20px;
   }
 }

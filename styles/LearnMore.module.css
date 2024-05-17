@@ -58,7 +58,6 @@
 @media only screen and (min-device-width: 428px) and (max-device-width: 926px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
     .contentWrapper {
         width: 430px;
-        overflow-x: auto;
         overflow-y: auto;
     }
 
@@ -76,6 +75,8 @@
     .main {
         background: linear-gradient(to bottom, var(--lightYellow), var(--lightGreen));
         position: relative;
+        max-height: 1600px;        
+
     }
 
     .menuIcon {

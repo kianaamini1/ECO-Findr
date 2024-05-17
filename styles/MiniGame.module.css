@@ -23,7 +23,7 @@
 .contentWrapper {
     width: 430px;
     height: 932px;
-    overflow-x: auto;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
 }
@@ -31,7 +31,7 @@
 .contentWrapperTwo {
     width: 430px;
     height: 932px;
-    overflow-x: auto;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,7 +120,7 @@
     .contentWrapper {
         max-width: 430px;
         height: 932px;
-        overflow-x: auto;
+        overflow-y: auto;
         background-image: linear-gradient(to bottom, rgba(113, 171, 209, 0.5), rgba(255, 255, 255, 0)), url('/images/mini-background.jpeg');
         background-repeat: no-repeat;
         background-position: center top, center;
@@ -178,11 +178,8 @@
 /* Media query for larger screens */
 @media only screen and (min-width: 1024px) {
     .main {
-        background-image: url('/images/mini-background.jpeg'), linear-gradient(to bottom, var(--lightYellow), var(--lightGreen));
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center top, center;
-    }
+        background: linear-gradient(to bottom, var(--lightYellow), var(--lightGreen));
+        }
 
     .menuIcon {
         position: fixed;
@@ -235,10 +232,11 @@
     }
 
     .bins {
-        display: column;
+        display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         margin-top: 50px;
+
     }
 }

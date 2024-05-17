@@ -5,8 +5,8 @@ const Bin = ({ id, onDrop, onDragOver, imageSrc, setScore }) => {
     const [isIncorrect, setIsIncorrect] = useState(false);
     const [isCorrect, setIsCorrect] = useState(false);
 
-    const correctAudio = useRef(new Audio('/correct-answer.mp3'));
-    const wrongAudio = useRef(new Audio('/wrong-answer.mp3'));
+    const correctAudio = useRef(new Audio('/audio/correct-answer.mp3'));
+    const wrongAudio = useRef(new Audio('/audio/wrong-answer.mp3'));
 
     correctAudio.current.volume = 0.2;
     wrongAudio.current.volume = 0.2;

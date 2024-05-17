@@ -74,10 +74,11 @@
   }
   
   .backBTN {
-    color: var(--black);
+    color: var(--white);
     background-color: var(--midGreen);
+    cursor: pointer;
   }
-  
+
   .backBTN:disabled {
     color: var(--clearButton);
     border: 1px solid var(--clearButton);
@@ -86,8 +87,24 @@
   .skipBTN {
     color: black;
     background-color: var(--paleGreen);
+    cursor: pointer;
+  }
+
+  .skipBTN:hover {
+    color: var(--white);
+    background-color: var(--midGreen);
+    cursor: pointer;
+    border-color: none;
   }
   
   .nextBTN {
-    background-color: var(--white);
+    background-color: var(--midGreen);
+    color: var(--white);
+    cursor: pointer;
+  }
+
+  .nextBTN:hover {
+    background-color: var(--paleGreen);
+    color: var(--black);
+    cursor: pointer;
   }

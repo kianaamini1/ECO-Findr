@@ -26,7 +26,7 @@
     font-weight: 500;
     font-size: 13px;
     background-color: var(--clearButton);
-    border: 1px solid var(--black);
+    border: 2px solid var(--black);
     border-radius: 5px;
 }
 

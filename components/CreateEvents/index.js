@@ -24,19 +24,19 @@ const calendarStyles = `
 `;
 
 const CalendarComponent = () => {
-  const [date, setDate] = useState(null);
+    const [date, setDate] = useState(null);
 
-  return (
-    <div className="card flex justify-content-center" style={{ maxWidth: '400px', margin: '0 auto'}}>
-      <Calendar
-        value={date}
-        onChange={(e) => setDate(e.value)}
-        inline
-        showWeek
-      />
-      <style>{calendarStyles}</style>
-    </div>
-  );
+    return (
+        <div className="card flex justify-content-center" style={{ maxWidth: '400px', margin: '0 auto' }}>
+            <Calendar
+                value={date}
+                onChange={(e) => setDate(e.value)}
+                inline
+                showWeek
+            />
+            <style>{calendarStyles}</style>
+        </div>
+    );
 };
 
 export default CalendarComponent;

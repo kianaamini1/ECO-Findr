@@ -33,7 +33,8 @@ export function NavigationBar() {
   }, [router.pathname]);
 
   return (
-    <div className={styles.container}>
+    <main className={`${styles.main}`}>
+    <div className={styles.containerNav}>
       <Link href="/Page-Home">
         <button
           className={
@@ -77,5 +78,6 @@ export function NavigationBar() {
         </button>
       </Link>
     </div>
+    </main>
   );
-};
+}

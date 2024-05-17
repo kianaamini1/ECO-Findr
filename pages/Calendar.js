@@ -1,6 +1,6 @@
 import Head from "next/head";
-import CalendarComponent from "../components/Calendar";
-import { UpcomingEvent } from "../components/Calendar/upcoming-event";
+import CalendarComponent from "../components/CreateEvents";
+import { UpcomingEvent } from "../components/CreateEvents/upcoming-events";
 import { NavigationBar } from "@/components/Navigation";
 import styles from "@/styles/Calendar.module.css";
 import React, { useState } from "react";
@@ -21,8 +21,10 @@ const CalendarPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <main className={`${styles.main}`}>
       <div className={styles.container}>
-        <main className={`${styles.main}`}>
+      <div className={styles.contentWrapper}>
+
           <img
             src={"/images/hamburgerMenu.png"}
             className={styles.menuIcon}
@@ -40,9 +42,10 @@ const CalendarPage = () => {
               <UpcomingEvent />
             </div>
           </div>
+          </div>
           <NavigationBar />
+          </div>
         </main>
-      </div>
     </>
   );
 };

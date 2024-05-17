@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 80vh;
   font-family: "Figtree", sans-serif;
 }
 
@@ -48,9 +47,8 @@
 
 .contentWrapper {
   width: 430px;
-  height: 932px;
+  height: auto;
   background-color: var(--white);
-  overflow-x: auto;
 }
 
 /* Media query for smaller screens */
@@ -68,6 +66,8 @@
   .main {
     background: linear-gradient(to bottom, var(--lightYellow), var(--lightGreen));
     position: relative;
+    max-height: 5000px;
+    overflow-y: hidden;
   }
 
   .chipsWrapper {

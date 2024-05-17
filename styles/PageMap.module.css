@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    min-height: 80vh;
+    min-height: 60vh;
     font-family: "Figtree", sans-serif;
     z-index: 1;
 }
@@ -48,6 +48,8 @@
     .main {
         background: linear-gradient(to bottom, var(--lightYellow), var(--lightGreen));
         position: relative;
+        max-height: 932px;
+        overflow-y: hidden;
     }
 
     .menuIcon {

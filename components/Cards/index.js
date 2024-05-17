@@ -76,7 +76,7 @@ export default function Cards({
               handleFavoriteClick(i);
             }}
           >
-            <UilHeart
+             <UilHeart
               className={`${styles.favoriteIcon} ${favoriteStatus[i] ? styles.favoriteIconClicked : ""
                 }`}
             />

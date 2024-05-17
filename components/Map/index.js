@@ -76,7 +76,7 @@ function Map() {
           time: "10:00 a.m.",
         },
         {
-          position: { lat: 49.282, lng: -123.1182 },
+          position: { lat: 49.2945, lng: -123.139999},
           iconUrl: "/images/garbage-pin.png",
           title: "Beach Cleanup",
           location: "Second Beach, Stanley Park, Vancouver, BC V6G 3E2",
@@ -84,7 +84,7 @@ function Map() {
           time: "1:00 p.m.",
         },
         {
-          position: { lat: 49.32, lng: -123.0669 },
+          position: { lat: 49.3439, lng: -123.0669 },
           iconUrl: "/images/hiking-pin.png",
           title: "Hiking",
           location: "Lynn Canyon Park, North Vancouver, BC V7J 3G8",

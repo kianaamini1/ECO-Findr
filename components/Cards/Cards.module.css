@@ -23,14 +23,34 @@
   position: absolute;
   width: 44px;
   height: 28px;
-  margin-top: 12px;
+  background-color: rgba(221, 229, 214, 0.3);
+  margin-top: 10px;
+  padding-top: 2px;
+  border: none;
   margin-left: -58px;
   border-radius: 135px;
 }
 
-.favoriteIconClicked {
-  color: black;
+.favoriteIcon:hover {
+  fill: #71a183;
+  transition: fill 0.3s ease;
+  cursor: pointer;
 }
+
+
+.favoriteIconClicked {
+  fill: var(--black);
+}
+
+.favoriteIconClicked::after {
+  fill: #71a183;
+}
+
+
+
+/* .favoriteIcon:hover {
+  fill: var(--white);
+} */
 
 .cardInfo {
   width: 353px;
@@ -41,19 +61,25 @@
 }
 
 .popup {
-  width: 350px;
-  height: 62px;
+  width: 355px;
+  height: 65px;
   position: fixed;
   left: 50%;
+  border-radius: 20px;
+  bottom: 90px;
   transform: translateX(-50%);
   background-color: var(--lightGreen);
+  z-index: 100000000;
 }
 
 .popupContent {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  text-align: center;
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-right: 5px;
 }
 
 .joinContent {
@@ -71,6 +97,10 @@
   color: inherit;
 }
 
+.angleRight {
+  padding-top: 5px;
+}
+
 .headInfo {
   display: flex;
   justify-content: space-between;
@@ -78,34 +108,26 @@
 }
 
 .joinButton {
-  width: 66px;
-  height: 22px;
-  margin-right: 10px;
+  width: 70px;
+  height: 25px;
+  margin-right: 15px;
   font-weight: 500;
   font-size: 13px;
   background-color: var(--lightYellow);
-  border: 1px solid var(--black);
+  border: 2px solid var(--black);
   border-radius: 5px;
+  cursor: pointer;
   /* margin-top: 40px; */
 }
 
-;
-
 .joinButton:hover {
-  width: 66px;
-  height: 22px;
-  margin-right: 10px;
-  font-weight: 500;
-  font-size: 13px;
   background-color: var(--black);
   color: var(--white);
-  border: 1px solid var(--black);
-  border-radius: 5px;
-  /* margin-top: 40px; */
+  border: 2px solid var(--black);
 }
 
 .h2 {
-  padding-top: 10px;
+  padding-top: 15px;
   padding-left: 20px;
   margin-bottom: 3px;
   font-size: 24px;

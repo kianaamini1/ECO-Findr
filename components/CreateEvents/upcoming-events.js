@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./Calendar.module.css";
+import styles from "./CreateEvents.module.css";
 import { Calendar } from "primereact/calendar";
 import { UilPen } from "@iconscout/react-unicons";
 
