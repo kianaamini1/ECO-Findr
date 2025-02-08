@@ -53,7 +53,9 @@
 }
 
 /* Media query for smaller screens */
-@media (max-width: 428px) {}
+@media (max-width: 428px) {
+  
+}
 
 /* Media query for larger screens */
 @media (min-width: 1024px) {
@@ -61,14 +63,13 @@
     width: 316px;
     height: 100%;
     display: flex;
-    position: fixed;
+    position: absolute;
     align-items: center;
     background-color: var(--darkGreen);
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
     top: 0px;
-    right: 623px;
-    z-index: 100000;
+    z-index: 10000000;
     flex-direction: column;
     justify-content: center;
   }

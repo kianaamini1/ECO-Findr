@@ -3,13 +3,19 @@ import React, { useState } from 'react';
 import { NavigationBar } from "@/components/Navigation";
 import HamburgerMenu from "@/components/HamburgerMenu";
 import styles from "@/styles/PageMap.module.css";
+import { SearchBar } from "@/components/SearchBar";
 import Map from "@/components/Map";
 
 const MapPage = () => {
   const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const toggleHamburgerMenu = () => {
     setShowHamburgerMenu(!showHamburgerMenu);
+  }
+
+  const handleSearch = (searchTerm) => {
+    setSearchTerm(searchTerm);
   }
 
   return (
@@ -23,17 +29,21 @@ const MapPage = () => {
       </Head>
       <main className={`${styles.main}`}>
         <div className={styles.container}>
-
-          <img src={"/images/hamburgerMenu.png"}
-            className={styles.menuIcon}
-            width="40px"
-            height="auto"
-            alt="hamburger menu"
-            onClick={toggleHamburgerMenu} />
-          <div className={`${styles.contentWrapper} contentWrapper`}>
+        <div className={styles.contentWrapper}>
+        <img
+              src={"/images/hamburgerMenu.png"}
+              className={styles.menuIcon}
+              width="40px"
+              height="auto"
+              alt="hamburger menu"
+              onClick={toggleHamburgerMenu}
+            />
+            
             {showHamburgerMenu && <HamburgerMenu closeMenu={toggleHamburgerMenu} />}
-            <Map address="3700 Willingdon Ave, Burnaby, BC V5G 3H2" />
+            <SearchBar onSearch={handleSearch} />
+            <Map address="3700 Willingdon Ave, Burnaby, BC V5G 3H2" searchTerm={searchTerm} />
           </div>
+
           <NavigationBar />
         </div>
       </main>

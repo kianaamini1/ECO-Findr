@@ -1,9 +1,11 @@
+import dynamic from 'next/dynamic';
 import React, { useState, useEffect } from 'react';
 import DraggableItem from '../components/DraggableItem';
-import Bin from '../components/GameBins';
 import styles from "@/styles/MiniGame.module.css";
 import HamburgerMenu from "@/components/HamburgerMenu";
 import { NavigationBar } from "@/components/Navigation";
+
+const Bin = dynamic(() => import('../components/GameBins'), { ssr: false });
 
 const ResultsPage = ({ score, onRestart }) => {
     const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
@@ -17,8 +19,7 @@ const ResultsPage = ({ score, onRestart }) => {
             <div className={styles.container}>
                 <main className={styles.main}>
                     <div className={styles.contentWrapperTwo}>
-                        <div className={styles.resultsCont}>
-                            <img
+                    <img
                                 src={"/images/hamburgerMenu.png"}
                                 className={styles.menuIcon}
                                 width="40px"
@@ -26,7 +27,7 @@ const ResultsPage = ({ score, onRestart }) => {
                                 alt="hamburger menu"
                                 onClick={toggleHamburgerMenu}
                             />
-                            {showHamburgerMenu && <HamburgerMenu closeMenu={toggleHamburgerMenu} />}
+                        <div className={styles.resultsCont}>
                             <h1>Game Over!</h1>
                             <p>Your final score is: {score}</p>
                             <button className={styles.button} onClick={onRestart}>Restart</button>
@@ -104,8 +105,9 @@ const Game = () => {
     }
 
     return (
-        <div className={styles.container}>
             <main className={styles.main}>
+                        <div className={styles.container}>
+
                 <div className={styles.contentWrapper}>
                     <img
                         src={"/images/hamburgerMenu.png"}
@@ -130,8 +132,9 @@ const Game = () => {
                     </div>
                 </div>
                 <NavigationBar />
+                </div>
+
             </main>
-        </div>
     );
 };
 

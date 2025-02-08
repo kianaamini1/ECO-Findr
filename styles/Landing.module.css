@@ -4,8 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 6rem;
-  min-height: 80vh;
+  min-height: 100vh;
   background-image: url('/images/landing-page.jpeg');
   background-size: cover;
   background-position: center top;
@@ -14,13 +13,13 @@
 .appName {
   margin-bottom: 20px;
   font-family: "Wendy One", sans-serif;
-  font-size: var(--h1-fontsize);
-  font-weight: 700;
-  font-style: bolder;
+  font-size: 90px;
+  font-family: "Wendy One", sans-serif;
+  font-weight: 500;
 }
 
 .container {
-  margin: 0 auto;
+  margin: 0;
   text-align: center;
 }
 
@@ -30,8 +29,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  gap: 40px;
+  gap: 25px;
 }
 
 /* Styles for buttons */
@@ -53,7 +51,6 @@
   border: 2px solid var(--darkGreen);
   background-color: var(--darkGreen);
   color: var(--white);
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
   width: 200px;
 }
 
@@ -66,18 +63,19 @@
 /* Media query for smaller screens */
 @media only screen and (min-device-width: 428px) and (max-device-width: 926px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
   .main {
-    background-image: url('/images/landing-page.jpeg');
     background-size: cover;
     background-position: center top;
+    max-height: 932px;
+    max-width: 430px;
   }
 }
 
 /* Media query for larger screens */
 @media only screen and (min-width: 1024px) {
   .main {
-    background-image: url('/images/landing-page.jpeg'), linear-gradient(to bottom, var(--lightYellow), var(--lightGreen));
+    background-image: url('/images/landing-page.jpeg'), linear-gradient(to bottom, var(--lightYellow), var(--lightGreen)) ;
     background-repeat: no-repeat;
     background-position: center top, center;
-    background-size: contain;
+    background-size: contain;    
   }
 }

@@ -1,19 +1,26 @@
 .main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    max-height: 120vh;
+    max-height: 100vh;
     font-family: "Figtree", sans-serif;
-}
+    position: relative;
+  }
 
 .menuIcon {
-    position: fixed;
-    top: 40px;
-    right: 30px;
-    max-width: 430px;
+  position: fixed;
+  top: 30px;
+  margin-left: 150px;
+  z-index: 100000;
+  cursor: pointer;
+
 }
 
+.container {
+  margin: 0;
+  text-align: center;
+}
 .chartsWrapper {
     display: flex;
     flex-direction: column;
@@ -33,17 +40,14 @@
     margin: 0 auto;
 }
 
+
 .contentWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-grow: 1;
     width: 430px;
-    max-height: auto;
+    max-height: 932px; 
     background-color: var(--white);
-    text-align: center;
-    overflow-x: auto;
     overflow-y: auto;
-}
+  }
 
 .chartsWrapper h2 {
     margin-top: 60px;
@@ -54,8 +58,14 @@
     margin-top: -20px;
 }
 
-/* Media query for smaller screens */
+/* Media query for smaller screens (iPhone 14 Pro Max) */
 @media only screen and (min-device-width: 428px) and (max-device-width: 926px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
+    .main {
+        max-height: 932px;
+        overflow: hidden;
+      }
+       
+
     .contentWrapper {
         width: 430px;
         overflow-y: auto;
@@ -67,40 +77,31 @@
         right: 30px;
         z-index: 1;
     }
-
 }
 
-/* Media query for larger screens */
+/* Media query for larger screens (Desktop) */
 @media only screen and (min-width: 1024px) {
     .main {
         background: linear-gradient(to bottom, var(--lightYellow), var(--lightGreen));
         position: relative;
-        max-height: 1600px;        
-
-    }
-
-    .menuIcon {
-        position: fixed;
-        top: 30px;
-        right: 650px;
-        cursor: pointer;
-    }
+        max-height: 932px;
+        overflow: hidden;
+      }
 
     .chartsWrapper {
         max-width: 100%;
-        width: 400px;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
     .contentWrapper {
-        width: 430px;
-        height: auto;
+        max-width: 430px;
+        position: relative;
+        max-height: 932px;
         background-color: var(--white);
         overflow-y: auto;
-        overflow-x: auto;
-    }
+      }
 
     .chartsWrapper h2 {
         margin-top: 60px;

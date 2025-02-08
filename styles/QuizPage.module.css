@@ -18,6 +18,7 @@
   align-items: center;
   position: fixed;
   top: 220px;
+
 }
 
 .indicatorsQuiz {
@@ -109,18 +110,17 @@
   margin-bottom: 10rem;
 }
 
-/* .quizCompleted {
-  margin-top: 0rem;
-  margin-bottom: 3rem;
-} */
-
 /* Media query for smaller screens */
 @media only screen and (min-device-width: 428px) and (max-device-width: 926px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
   .main {
     background-image: url('/images/landing-page.jpeg');
     background-size: cover;
     background-position: center top;
+    max-height: 932px;
+    max-width: 430px;
   }
+
+
 }
 
 /* Media query for larger screens */

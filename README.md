@@ -31,4 +31,5 @@
 - charts.js
 - react-unicons
 - primeicons
--
+- react-google-maps
+- react-switch

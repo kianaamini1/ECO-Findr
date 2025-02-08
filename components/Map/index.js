@@ -76,7 +76,7 @@ function Map() {
           time: "10:00 a.m.",
         },
         {
-          position: { lat: 49.2945, lng: -123.139999},
+          position: { lat: 49.2945, lng: -123.139999 },
           iconUrl: "/images/garbage-pin.png",
           title: "Beach Cleanup",
           location: "Second Beach, Stanley Park, Vancouver, BC V6G 3E2",
@@ -169,6 +169,7 @@ function Map() {
         google.maps.event.addListener(marker, 'click', () => {
           const infowindow = new google.maps.InfoWindow({
             content: `
+            <div class="${styles.main}">
               <div class="${styles.infowindowContent}">
                 <div class="${styles.infowindowHeader}">
                   <div class="${styles.infowindowTitle}">${markerData.title}</div>
@@ -179,6 +180,7 @@ function Map() {
                   <strong>Date:</strong> ${markerData.date}<br>
                   <strong>Time:</strong> ${markerData.time}
                 </div>
+              </div>
               </div>
             `,
           });

@@ -46,9 +46,8 @@
 
 /* Media query for smaller screens */
 @media only screen and (min-device-width: 428px) and (max-device-width: 926px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3) {
-    .container {
-        max-width: 430px;
-        max-height: 860px;
+    .main {
+        max-height: 932px;
     }
 
 
@@ -56,9 +55,9 @@
 
 /* Media query for larger screens */
 @media only screen and (min-width: 1024px) {
-    .container {
+    .main {
         max-width: 430px;
-        max-height: 855px;
+        max-height: 932px;
     }
 
 }

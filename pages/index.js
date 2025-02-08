@@ -15,11 +15,11 @@ const Home = () => {
       </Head>
       <main className={`${styles.main}`}>
         <div className={styles.container}>
-          <h1 className={styles.appName}>
-            Eco
-            <br />
-            Findr
-          </h1>
+        <h1 className={styles.appName}>
+          Eco
+          <br />
+          Findr
+        </h1>
           <div className={styles.buttonContainer}>
             <Link href="/Quiz">
               <Button className={styles.button} text="Get Started &#8594;" />
@@ -29,7 +29,6 @@ const Home = () => {
             </Link>
           </div>
         </div>
-
       </main>
     </>
   );
